@@ -17,7 +17,13 @@ class UserController extends Controller
         ]);
     }
 
-    function read() {
+    function read()
+    {
         return User::find(2)->post()->count();
+    }
+
+    function show()
+    {
+        return  User::find(1)->roles;
     }
 }

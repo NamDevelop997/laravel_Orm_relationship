@@ -36,4 +36,10 @@ Route::prefix('featured_img')->group(function () {
 Route::prefix('users')->group(function () {
     Route::get('add', 'UserController@add');
     Route::get('read', 'UserController@read');
+    Route::get('show', 'UserController@show');
+});
+
+Route::prefix('roles')->group(function () {
+    Route::get('show', 'RoleController@show');
+    // Route::get('read', 'UserController@read');
 });
